@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Train schedule</title>
+	<script src="https://www.gstatic.com/firebasejs/4.1.4/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="train.css">
+</head>
+<body>
+		<div class="timeDisplayContainer">
+			<div class="timeDisplay">
+				<strong><p style="color: blue;" class="timeDisplayHead">CURRENT DATE/TIME</p></strong>
+				<strong> <p id="headerSpan"></p></strong>
+				
+			</div>			
+		</div>
+	<div class="fourthHolder"></div>
+	<div class="addTrain">
+		<h3 class="fieldHead">BUY TRAIN TICKET HERE</h3>
+		<div class="panel-body">
+			
+			<div class="fieldDiv">
+				<label for="">Number</label>
+				<input type="text" class="field" placeholder="Enter Train Number.." id="trainNumber">
+			</div>
+			<div class="fieldDiv">
+				<label for="">Name</label>
+				<input type="text" class="field" placeholder="Enter Train Name.." id="trainName">
+			</div>
+			<div class="fieldDiv">
+				<label for="">Destination</label>
+				<input type="text" class="field" placeholder="Enter Train Destination.." id="destination">
+			</div>
+			<div class="fieldDiv">
+				<label for="">Frequency</label>
+				<input type="text" class="field" placeholder="Enter Frequency in Minutes.." id="frequency">
+			</div>
+			<button style="cursor: pointer;margin: 5px; padding: 5px; font-weight: bolder; background-color: green; border-radius: 5px;" type="text" class="btn btn-success blackBg" id="addTrain">Submit Train Ride</button>
+		</div>
+	</div>
+	<div class="myTable">
+		<h4>TRAIN SCHEDULE</h4>
+		<table>
+			<div class="theader">
+				<thead>
+					<tr class="tableRow">
+						<th class="thead"> Next Arrival</th>
+						<th class="thead"> Number</th>
+						<th class="thead"> Name</th>
+						<th class="thead"> Destination</th>
+						<th class="thead"> Frequency</th>
+						<th> Wait Time</th>						
+					</tr>
+				</thead>
+			</div>
+				<tbody id="tableBody"></tbody>
+		</table>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <script src="train.js"></script>
+
+</body>
+</html>
